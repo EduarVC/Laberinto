@@ -1,8 +1,9 @@
 package com.mycompany.laberinto;
 
-import static com.mycompany.laberinto.Matriz.Matriz;
-import static com.mycompany.laberinto.MenuPrincipal.MenuPrincipal;
+//import static com.mycompany.laberinto.Matriz.Matriz;
 
+import static com.mycompany.laberinto.MenuPrincipal.MenuPrincipal;
+import static com.mycompany.laberinto.Mapa.Mapas;
 import java.util.Scanner;
 
 public class Juego {
@@ -25,20 +26,20 @@ public class Juego {
             Juego();
         }
     }
-    public static void Mapas(){
+    //public static void Mapas(){
         
-        Scanner scanner = new Scanner(System.in);
+       // Scanner scanner = new Scanner(System.in);
    
-        int opcion;
-        String NombreMapa = "Predeterminado";
+        //int opcion;
+        //String NombreMapa = "Predeterminado";
         
-        System.out.println("Elija Un mapa: ");
-        System.out.println("1 " + NombreMapa);
-        opcion = scanner.nextInt();
+        //System.out.println("Elija Un mapa: ");
+       // System.out.println("1 " + NombreMapa);
+       // opcion = scanner.nextInt();
         
-        if(opcion == 1){
-            Matriz(opcion);
-        }
-    }
+        //if(opcion == 1){
+          //  Matriz(opcion);
+       // }
+    //}
 
 }
