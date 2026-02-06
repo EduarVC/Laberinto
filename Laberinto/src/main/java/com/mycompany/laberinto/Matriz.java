@@ -76,7 +76,8 @@ public class Matriz {
     }
 
     public static void MatrizPequeña(String[][] Matriz, int posicionXJugador, int posicionYJugador) {
-
+        
+        //Muestra el mapa si el jugador esta cerca de las orilla
         if (posicionXJugador == 1 && posicionYJugador != 0 && posicionYJugador != 1 && posicionYJugador != 28 && posicionYJugador != 29) {
             for (int i = posicionXJugador - 1; i < posicionXJugador + 3; i++) {
                 for (int j = posicionYJugador - 2; j < posicionYJugador + 3; j++) {
@@ -84,7 +85,7 @@ public class Matriz {
                 }
                 System.out.println("");
             }
-
+            
         } else if (posicionXJugador == 28 && posicionYJugador != 0 && posicionYJugador != 1 && posicionYJugador != 28 && posicionYJugador != 29) {
             for (int i = posicionXJugador - 2; i < posicionXJugador + 2; i++) {
                 for (int j = posicionYJugador - 2; j < posicionYJugador + 3; j++) {

@@ -50,7 +50,7 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
-                                //System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                //TeAtraparon();
                                 TeAtraparon();
                                 verAtrapaJugador = true;
                             }
@@ -245,7 +245,7 @@ public class ProcesoJuego {
                             }
                             matriz[PosicionXBoot][PosicionYBoot - 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Oeste");
+                            MovimientoO();
                             PosicionYBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot + 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
@@ -254,12 +254,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot][PosicionYBoot + 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Este");
+                            MovimientoE();
                             PosicionYBoot++;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot - 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
@@ -268,12 +268,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot - 1][PosicionYBoot] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Norte");
+                            MovimientoN();
                             PosicionXBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         }
@@ -285,12 +285,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot - 1][PosicionYBoot] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Norte");
+                            MovimientoN();
                             PosicionXBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot + 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
@@ -299,12 +299,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot][PosicionYBoot + 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Este");
+                            MovimientoE();
                             PosicionYBoot++;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot - 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
@@ -313,12 +313,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot][PosicionYBoot - 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Oeste");
+                            MovimientoO();
                             PosicionYBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot + 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
@@ -327,12 +327,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot + 1][PosicionYBoot] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Sur");
+                            MovimientoS();
                             PosicionXBoot++;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         }
@@ -347,12 +347,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot][PosicionYBoot - 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Oeste");
+                            MovimientoO();
                             PosicionYBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot - 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
@@ -361,12 +361,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot - 1][PosicionYBoot] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Norte");
+                            MovimientoN();
                             PosicionXBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot + 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
@@ -375,12 +375,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot][PosicionYBoot + 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Este");
+                            MovimientoE();
                             PosicionYBoot++;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot + 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
@@ -389,12 +389,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot + 1][PosicionYBoot] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Sur");
+                            MovimientoS();
                             PosicionXBoot++;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (" J".equals(matriz[PosicionXBoot - 2][PosicionYBoot + 2]) || " J".equals(matriz[PosicionXBoot - 1][PosicionYBoot + 2]) || " J".equals(matriz[PosicionXBoot][PosicionYBoot + 2]) || " J".equals(matriz[PosicionXBoot + 1][PosicionYBoot + 2]) || " J".equals(matriz[PosicionXBoot + 2][PosicionYBoot + 2]) || " J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
@@ -404,12 +404,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot][PosicionYBoot + 1] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Este");
+                                MovimientoE();
                                 PosicionYBoot++;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot - 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
@@ -418,12 +418,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot - 1][PosicionYBoot] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Norte");
+                                MovimientoN();
                                 PosicionXBoot--;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot - 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
@@ -432,12 +432,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot][PosicionYBoot - 1] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Oeste");
+                                MovimientoO();
                                 PosicionYBoot--;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot + 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
@@ -446,12 +446,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot + 1][PosicionYBoot] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Sur");
+                                MovimientoS();
                                 PosicionXBoot++;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             }
@@ -462,12 +462,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot - 1][PosicionYBoot] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Norte");
+                                MovimientoN();
                                 PosicionXBoot--;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot - 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
@@ -476,12 +476,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot][PosicionYBoot - 1] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Oeste");
+                                MovimientoO();
                                 PosicionYBoot--;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot + 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
@@ -490,12 +490,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot][PosicionYBoot + 1] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Este");
+                                MovimientoE();
                                 PosicionYBoot++;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot + 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
@@ -504,12 +504,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot + 1][PosicionYBoot] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Sur");
+                                MovimientoS();
                                 PosicionXBoot++;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             }
@@ -520,12 +520,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot + 1][PosicionYBoot] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Sur");
+                                MovimientoS();
                                 PosicionXBoot++;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot - 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
@@ -534,12 +534,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot][PosicionYBoot - 1] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Oeste");
+                                MovimientoO();
                                 PosicionYBoot--;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot + 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
@@ -548,12 +548,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot][PosicionYBoot + 1] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Este");
+                                MovimientoE();
                                 PosicionYBoot++;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             } else if (!" #".equals(matriz[PosicionXBoot - 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
@@ -562,12 +562,12 @@ public class ProcesoJuego {
                                 } else if (" O".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
                                     CasillaActual = " O";
                                 } else if (" J".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
-                                    System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                    TeAtraparon();
                                     verAtrapaJugador = true;
                                 }
                                 matriz[PosicionXBoot - 1][PosicionYBoot] = " B";
                                 matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                                System.out.println("\nEl Boot se a movido una casilla hacia el Norte");
+                                MovimientoN();
                                 PosicionXBoot--;
                                 conteoMovimientoboot = conteoMovimientoboot + 1;
                             }
@@ -579,12 +579,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot - 1][PosicionYBoot])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot - 1][PosicionYBoot] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Norte");
+                            MovimientoN();
                             PosicionXBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot + 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
@@ -593,12 +593,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot + 1])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot][PosicionYBoot + 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Este");
+                            MovimientoE();
                             PosicionYBoot++;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot][PosicionYBoot - 1]) && !" S".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
@@ -607,12 +607,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot][PosicionYBoot - 1])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot][PosicionYBoot - 1] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Oeste");
+                            MovimientoO();
                             PosicionYBoot--;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         } else if (!" #".equals(matriz[PosicionXBoot + 1][PosicionYBoot]) && !" S".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
@@ -621,12 +621,12 @@ public class ProcesoJuego {
                             } else if (" O".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
                                 CasillaActual = " O";
                             } else if (" J".equals(matriz[PosicionXBoot + 1][PosicionYBoot])) {
-                                System.out.println("\nEl Boot te alcanzo, has perdido el juego");
+                                TeAtraparon();
                                 verAtrapaJugador = true;
                             }
                             matriz[PosicionXBoot + 1][PosicionYBoot] = " B";
                             matriz[PosicionXBoot][PosicionYBoot] = CasillaActual;
-                            System.out.println("\nEl Boot se a movido una casilla hacia el Sur");
+                            MovimientoS();
                             PosicionXBoot++;
                             conteoMovimientoboot = conteoMovimientoboot + 1;
                         }
